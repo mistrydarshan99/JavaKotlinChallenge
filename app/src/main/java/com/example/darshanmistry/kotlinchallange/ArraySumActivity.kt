@@ -17,9 +17,8 @@ class ArraySumActivity : AppCompatActivity() {
 
   private fun simpleArraySumOne(ar: Array<Int>) = ar.sum()
 
-  private fun simpleArraySum(ar: Array<Int>) = ar
-    .sumBy {
-      it
-    }
+  private fun simpleArraySum(ar: Array<Int>) = ar.sumBy {
+    it
+  }
 
 }

@@ -9,16 +9,17 @@ class LongestPrefixActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
-    longestCommonPrefix(arrayOf("leets", "leetCode", "leeds", "leef"))
+//    longestCommonPrefix(arrayOf("leets", "leetCode", "leeds", "leef"))
+    binarySearchAlgo(arrayOf("leets", "leetCode", "leeds", "leef"))
   }
 
-  private fun longestCommonPrefix(strs: Array<String>): String {
+  private fun longestCommonPrefix(strs1: Array<String>): String {
 
-    if (strs.isEmpty()) {
+    if (strs1.isEmpty()) {
       return ""
     }
 
-    val sortedArray = strs.sortedBy {
+    val sortedArray = strs1.sortedBy {
       it.length
     }
     var longPrefix = sortedArray[0]
@@ -31,6 +32,15 @@ class LongestPrefixActivity : AppCompatActivity() {
     }
 
     return longPrefix
+
+  }
+
+  private fun binarySearchAlgo(listStr: Array<String>) {
+    val sortedArray = listStr.sortedBy {
+      it.length
+    }
+    val binarySearch = sortedArray.binarySearch("leets", 0, sortedArray.size)
+    println("---------Value---------------$binarySearch")
 
   }
 
